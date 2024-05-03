@@ -10,7 +10,7 @@ export class QuizService {
     @InjectRepository(Quiz) private readonly quizRepository: Repository<Quiz>,
   ) {}
   async getAllQuiz(): Promise<Quiz[]> {
-    return await this.quizRepository.find({relations: ['questions']});
+     return await this.quizRepository.find({relations: ['questions', 'questions.options']});
   }
   async createNewQuiz(quizData: CreateQuizDto): Promise<Quiz> {
     return await this.quizRepository.save(quizData);
@@ -20,7 +20,7 @@ export class QuizService {
       where: {
         id,
       },
-      relations: ['questions'],
+      relations: ['questions', 'questions.options'],
     });
   }
 }
