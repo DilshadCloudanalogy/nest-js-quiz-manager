@@ -3,14 +3,15 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { QuizModule } from './modules/quiz/quiz.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { typeOrmConfigAsync } from './config/typeorm.config';
 import { ConfigModule } from '@nestjs/config';
 import { UserModule } from './modules/user/user.module';
+import { typeOrmAsyncConfig } from './config/typeorm.config';
+import { AuthModule } from './modules/auth/auth.module';
 
 @Module({
-  imports: [QuizModule, TypeOrmModule.forRootAsync(typeOrmConfigAsync), ConfigModule.forRoot({
+  imports: [QuizModule, TypeOrmModule.forRootAsync(typeOrmAsyncConfig), ConfigModule.forRoot({
     envFilePath: '.env',
-  }), UserModule],
+  }), UserModule, AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })
