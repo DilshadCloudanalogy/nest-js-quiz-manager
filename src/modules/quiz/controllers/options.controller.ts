@@ -3,6 +3,8 @@ import { OptionsService } from "../services/options.service";
 import { QuestionService } from "../services/question.service";
 import { CreateOptionDto } from "../dto/create-option.dto";
 import { Question } from "../entities/question.entity";
+import { ApiTags } from "@nestjs/swagger";
+@ApiTags('Question')
 
 @Controller("question/option")
 export class OptionController {
