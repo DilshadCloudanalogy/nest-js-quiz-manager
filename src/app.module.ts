@@ -12,7 +12,10 @@ import { ApiTokenCheckMiddleware } from './common/middleware/api-token-check.mid
 @Module({
   imports: [QuizModule, TypeOrmModule.forRootAsync(typeOrmAsyncConfig), ConfigModule.forRoot({
     envFilePath: '.env',
-  }), UserModule, AuthModule],
+  }), 
+  UserModule, 
+  AuthModule
+],
   controllers: [AppController],
   providers: [AppService],
 })

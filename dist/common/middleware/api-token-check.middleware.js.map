@@ -1,1 +1,0 @@
-{"version":3,"file":"api-token-check.middleware.js","sourceRoot":"","sources":["../../../src/common/middleware/api-token-check.middleware.ts"],"names":[],"mappings":";;;AAGA,MAAa,uBAAuB;IAChC,GAAG,CAAC,GAAY,EAAE,GAAa,EAAE,IAAkB;QAI/C,IAAI,EAAE,CAAC;IACX,CAAC;CACJ;AAPD,0DAOC"}
