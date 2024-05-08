@@ -15,7 +15,7 @@ import { CreateQuizDto } from '../dto/CreateQuiz.dto';
 import { Quiz } from '../entities/quiz.entity';
 import { ApiCreatedResponse, ApiTags } from '@nestjs/swagger';
 import { IPaginationOptions, Pagination } from 'nestjs-typeorm-paginate';
-import { ApiPaginatedResponse } from 'src/common/decorator/api-pagination.response';
+import { ApiPaginatedResponse } from '../../../common/decorator/api-pagination.response';
 
 
 @ApiTags('Quiz')
